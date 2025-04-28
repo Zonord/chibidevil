@@ -1,3 +1,4 @@
+*conceptual stage*
 ChibiDevil 🚀🔥
 
 A minimalist systemd alternative built on a microkernel architecture
@@ -16,11 +17,9 @@ Current Status: Early conceptual phase (but the demon is waking up!)
 
     Modular services: Everything else runs as managed services
 
-    Simplicity: Clean, maintainable codebase
+    Simplicity: Clean, maintainable codebase(probably) 
 
-    Transparency: No magic - know exactly what's running
-
-    Devilish efficiency: Small footprint, big capabilities
+    Devilish efficiency: Small footprint, big capabilities (i hope so) 
 
 🏗 Planned Components
 Component	Status	Description
@@ -64,7 +63,7 @@ Login Manager	💡	User session management
 bash
 
 # Clone the repository
-git clone https://github.com/yourusername/chibidevil.git
+git clone https://github.com/zonord/chibidevil.git
 cd chibidevil
 
 # Build (when available)(TBD)
