@@ -5,12 +5,18 @@ use std::time::Duration;
 
 
 fn main() {
-    println!("Custom init started with PID {}", std::process::id());
+    println!("[chibi] - init completed , process id : ", std::process::id());
+
+    let ipc_pid = fork_exec("ipc-bus");
+    let sm_pid = fork_exec("service-manager");
+    
     loop{
-        log("hi");
-        let st = Duration::from_secs(1);
-        std::thread::sleep(st);
-    }
+        let (pid, status) = waitpid(-1, None);
+        if pid == sm_pid {
+            eprintln!("ServiceManager crashed. Restarting...");
+            sm_pid = fork_exec("service-manager");
+            }   
+        }
 }
 
 
